@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--Dependency bean-->
+    <bean id="featureService" class="com.sprinfnew.demoapp.services.FeatureService">
+    </bean>
+
+    <!--baseballCoach object-->
+    <bean id="baseballCoach" class="com.sprinfnew.demoapp.coach.BaseballCoach">
+        <constructor-arg ref="featureService" />
+    </bean>
+
+    <!--cricketCoach object-->
+    <bean id="circketCoach" class="com.sprinfnew.demoapp.coach.CircketCoach">
+        <constructor-arg ref="featureService" />
+        <property name="firstName" value="Mikel cors" />
+        <property name="webTechnology" value="reactJs" />
+    </bean>
+
+</beans>
