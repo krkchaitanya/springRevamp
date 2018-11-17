@@ -16,7 +16,7 @@
     </bean>
 
     <!--cricketCoach object-->
-    <bean id="circketCoach" class="com.sprinfnew.demoapp.coach.CircketCoach">
+    <bean id="cricketCoach" class="com.sprinfnew.demoapp.coach.CricketCoach">
         <constructor-arg ref="featureService" />
         <property name="firstName" value="Mikel cors" />
         <property name="webTechnology" value="reactJs" />

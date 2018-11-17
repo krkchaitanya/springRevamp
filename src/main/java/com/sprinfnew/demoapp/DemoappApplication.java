@@ -1,7 +1,7 @@
 package com.sprinfnew.demoapp;
 
 import com.sprinfnew.demoapp.coach.BaseballCoach;
-import com.sprinfnew.demoapp.coach.CircketCoach;
+import com.sprinfnew.demoapp.coach.CricketCoach;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -15,7 +15,7 @@ public class DemoappApplication {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
         BaseballCoach baseballCoach = (BaseballCoach) context.getBean("baseballCoach");
-        CircketCoach cricketCoach = (CircketCoach) context.getBean("circketCoach");
+        CricketCoach cricketCoach = (CricketCoach) context.getBean("cricketCoach");
 
         System.out.println(baseballCoach.getDailyWorkout());
         System.out.println(baseballCoach.getTimeInformation());

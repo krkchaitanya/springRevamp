@@ -2,15 +2,15 @@ package com.sprinfnew.demoapp.coach;
 
 import com.sprinfnew.demoapp.services.FeatureService;
 
-public class CircketCoach implements Coach {
+public class CricketCoach implements Coach {
     private FeatureService featureService;
     private String webTechnology;
     private String firstName;
 
-    public CircketCoach() {
+    public CricketCoach() {
     }
 
-    public CircketCoach(FeatureService featureService) {
+    public CricketCoach(FeatureService featureService) {
         this.featureService = featureService;
     }
 
