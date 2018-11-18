@@ -2,6 +2,7 @@ package com.sprinfnew.demoapp;
 
 import com.sprinfnew.demoapp.coach.BaseballCoach;
 import com.sprinfnew.demoapp.coach.CricketCoach;
+import com.sprinfnew.demoapp.userDataOperations.UserInfoHandler;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -16,6 +17,8 @@ public class DemoappApplication {
 
         BaseballCoach baseballCoach = (BaseballCoach) context.getBean("baseballCoach");
         CricketCoach cricketCoach = (CricketCoach) context.getBean("cricketCoach");
+        UserInfoHandler userInfoHandler = new UserInfoHandler();
+
 
         System.out.println(baseballCoach.getDailyWorkout());
         System.out.println(baseballCoach.getTimeInformation());
@@ -24,6 +27,9 @@ public class DemoappApplication {
         System.out.println(cricketCoach.getDailyWorkout());
         System.out.println(cricketCoach.getWebTechnology());
         System.out.println(cricketCoach.getFirstName());
+
+        System.out.println(userInfoHandler.getUserData().toString());
+        System.out.println("Spring Annotations--> "+userInfoHandler.getUserFortune());
 
 
         context.close();

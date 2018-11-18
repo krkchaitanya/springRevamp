@@ -22,4 +22,5 @@
         <property name="webTechnology" value="reactJs" />
     </bean>
 
+    <context:component-scan base-package="com.sprinfnew.demoapp.userDataOperations" />
 </beans>
