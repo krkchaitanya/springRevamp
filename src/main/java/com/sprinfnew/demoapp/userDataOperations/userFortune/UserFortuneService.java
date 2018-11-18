@@ -3,8 +3,10 @@ package com.sprinfnew.demoapp.userDataOperations.userFortune;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UserFortuneService {
-    public String getUserFortune(String fortuneData){
+public class UserFortuneService implements UserFortune {
+
+    @Override
+    public String userFortuneData(String fortuneData) {
         return fortuneData;
     }
 }

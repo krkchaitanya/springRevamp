@@ -1,7 +1,9 @@
 package com.sprinfnew.demoapp.userDataOperations;
 
 import com.sprinfnew.demoapp.userDataOperations.userFortune.UserFortuneService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 
 public class UserInfoHandler {
 
@@ -17,7 +19,8 @@ public class UserInfoHandler {
                 );
         return user1;
     }
+    @Autowired
     public String getUserFortune() {
-        return userFortuneService.getUserFortune("User will receive the greatest info from haven");
+        return userFortuneService.userFortuneData("User will receive the greatest info from haven");
     }
 }
