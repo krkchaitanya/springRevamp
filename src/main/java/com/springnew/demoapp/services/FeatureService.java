@@ -1,4 +1,4 @@
-package com.sprinfnew.demoapp.services;
+package com.springnew.demoapp.services;
 
 public class FeatureService {
     public String getFortune() {

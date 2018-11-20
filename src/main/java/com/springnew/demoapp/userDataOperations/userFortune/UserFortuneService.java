@@ -1,4 +1,4 @@
-package com.sprinfnew.demoapp.userDataOperations.userFortune;
+package com.springnew.demoapp.userDataOperations.userFortune;
 
 import org.springframework.stereotype.Component;
 

@@ -1,4 +1,4 @@
-package com.sprinfnew.demoapp.userDataOperations;
+package com.springnew.demoapp.userDataOperations;
 
 public class UserDO {
     private String firstName;

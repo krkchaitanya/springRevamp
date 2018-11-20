@@ -1,6 +1,6 @@
-package com.sprinfnew.demoapp.userDataOperations;
+package com.springnew.demoapp.userDataOperations;
 
-import com.sprinfnew.demoapp.userDataOperations.userFortune.UserFortuneService;
+import com.springnew.demoapp.userDataOperations.userFortune.UserFortuneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

@@ -1,6 +1,6 @@
-package com.sprinfnew.demoapp.coach;
+package com.springnew.demoapp.coach;
 
-import com.sprinfnew.demoapp.services.FeatureService;
+import com.springnew.demoapp.services.FeatureService;
 
 public class BaseballCoach implements Coach{
 

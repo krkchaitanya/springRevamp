@@ -1,8 +1,8 @@
-package com.sprinfnew.demoapp;
+package com.springnew.demoapp;
 
-import com.sprinfnew.demoapp.coach.BaseballCoach;
-import com.sprinfnew.demoapp.coach.CricketCoach;
-import com.sprinfnew.demoapp.userDataOperations.UserInfoHandler;
+import com.springnew.demoapp.coach.BaseballCoach;
+import com.springnew.demoapp.coach.CricketCoach;
+import com.springnew.demoapp.userDataOperations.UserInfoHandler;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

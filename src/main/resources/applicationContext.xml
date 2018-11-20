@@ -7,20 +7,21 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!--Dependency bean-->
-    <bean id="featureService" class="com.sprinfnew.demoapp.services.FeatureService">
+    <bean id="featureService" class="com.springnew.demoapp.services.FeatureService">
     </bean>
 
     <!--baseballCoach object-->
-    <bean id="baseballCoach" class="com.sprinfnew.demoapp.coach.BaseballCoach">
+    <bean id="baseballCoach" class="com.springnew.demoapp.coach.BaseballCoach">
         <constructor-arg ref="featureService" />
     </bean>
 
     <!--cricketCoach object-->
-    <bean id="cricketCoach" class="com.sprinfnew.demoapp.coach.CricketCoach">
+    <bean id="cricketCoach" class="com.springnew.demoapp.coach.CricketCoach">
         <constructor-arg ref="featureService" />
         <property name="firstName" value="Mikel cors" />
         <property name="webTechnology" value="reactJs" />
     </bean>
 
-    <context:component-scan base-package="com.sprinfnew.demoapp.userDataOperations" />
+    <context:component-scan base-package="com.springnew.demoapp.userDataOperations" />
+    <context:component-scan base-package="com.springQualifiers" />
 </beans>
