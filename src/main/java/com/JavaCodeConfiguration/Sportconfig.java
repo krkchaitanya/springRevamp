@@ -1,6 +1,7 @@
 package com.JavaCodeConfiguration;
 
-import com.springnew.demoapp.coach.Coach;
+import com.JavaCodeConfiguration.services.FortuneService;
+import com.JavaCodeConfiguration.services.SadFortuneService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -10,9 +11,13 @@ import org.springframework.context.annotation.Configuration;
 public class Sportconfig {
 
     @Bean
-    public Coach swimCoach() {
-        SwimCoach swimCoach = new SwimCoach();
+    public FortuneService sadFortuneService() {
+        return new SadFortuneService();
+    }
 
-        return swimCoach;
+    @Bean
+    public Coach swimCoach() {
+        return new SwimCoach(sadFortuneService());
+
     }
 }
