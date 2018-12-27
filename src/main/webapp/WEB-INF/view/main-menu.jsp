@@ -28,6 +28,10 @@
 
 		<div class="starter-template">
 			<h1>Spring Boot Web JSP Example</h1>
+			<br />
+			<form action="showForm" method="GET">
+			    <input type="submit" class="btn btn-info" />
+			</form>
 		</div>
 
 	</div>
