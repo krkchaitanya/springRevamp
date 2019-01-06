@@ -21,6 +21,6 @@ public class UserInfoHandler {
     }
     @Autowired
     public String getUserFortune() {
-        return userFortuneService.userFortuneData("User will receive the greatest info from haven");
+        return userFortuneService.userFortuneData("Users will receive the greatest info from haven");
     }
 }
