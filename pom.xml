@@ -76,6 +76,8 @@
 		</dependency>
 
         <!--Oracle database driver -->
+		<!--install ojdbc driver in maven local repository through intellij mvn commandline-->
+        <!--ojdbc drivers were not available at maven central repository-->
         <dependency>
             <groupId>com.oracle</groupId>
             <artifactId>ojdbc6</artifactId>
