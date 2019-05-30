@@ -40,6 +40,31 @@ public class NowJava8 {
                 .orElse(null);
         System.out.println(" -- resultPerson8 -- " + resultPerson8);
 
+
+//        filter() and map()
+        System.out.println("--- streams = filter() // map() // forEach() ---");
+
+        List<Person> personlstHere = Arrays.asList(
+                new Person("utahman", 22),
+                new Person("houstonman", 25),
+                new Person("austinman", 43),
+                new Person("floridaman", 33)
+        );
+
+        List<String> mountainMan = personlstHere.stream()
+                .map(person -> person.getName())
+                .collect(Collectors.toList());
+
+        System.out.println(mountainMan.stream().map(ele -> ele.toUpperCase()).collect(Collectors.toList()));
+
+        List<Person> filterdMan = personlstHere.stream()
+                .filter(person -> "utahman".equalsIgnoreCase(person.getName()) ||
+                "austinman".equalsIgnoreCase(person.getName()))
+                .collect(Collectors.toList());
+        filterdMan.stream().forEach(per -> System.out.println(per.getName().toUpperCase()));
+
+        System.out.println("-------------------------------");
+
     }
 
 
