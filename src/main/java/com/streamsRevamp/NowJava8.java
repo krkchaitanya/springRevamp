@@ -2,9 +2,7 @@ package com.streamsRevamp;
 
 import com.samplePojos.Person;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class NowJava8 {
@@ -64,6 +62,21 @@ public class NowJava8 {
         filterdMan.stream().forEach(per -> System.out.println(per.getName().toUpperCase()));
 
         System.out.println("-------------------------------");
+
+
+        Map<String, Number> somVal = new HashMap<>();
+        somVal.put("A", 1121);
+        somVal.put("B", 1122);
+        somVal.put("C", 1123);
+        somVal.put("D", 1124);
+        somVal.put("E", 1125);
+        somVal.forEach((m,n) -> {
+            if ("C".equalsIgnoreCase(m)) {
+                System.out.println(" Hello =C=");
+                somVal.replace("C", 1111);
+            }
+        });
+        somVal.forEach((m,n) -> System.out.println(m + " " + n));
 
     }
 
