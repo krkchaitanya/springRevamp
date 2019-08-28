@@ -65,9 +65,19 @@ public class LamdasHelper {
         String[] s1 = new String[]{"a", "b", "c"};
         String[] s2 = new String[]{"d", "e", "f"};
         String[] s3 = new String[]{"g", "h", "i"};
+        // flatmap() - combination of a map and a flat operation == ie:Stream of List of <<Data Type>>  to  Stream of <<Data Type>>
         // Stream.of(s1, s2, s3).flatMap(Stream::of).toArray(String[]::new);
         String[] s4 = Arrays.asList(s1, s2, s3).stream().flatMap(ele -> Stream.of(ele)).toArray(String[]::new);
         System.out.println(Arrays.toString(s4));
 
+        // Converting array to streams
+        String[] seriesBucketList = new String[] {"Stranger things", "the100", "13 reasons why", "last IO"};
+        Arrays.stream(seriesBucketList).forEach(System.out::println);
+        System.out.println(Arrays.toString(Stream.of(seriesBucketList).toArray()));
+
+        // Assigning to new array
+        String[] showCharacters = new String[] {"Will", "Nancy", "Jaha", "Jhonnathan", "Octavia"};
+        String[] showCharacters2 = Stream.of(showCharacters).toArray(String[]::new);
+        System.out.println(Arrays.toString(showCharacters2));
     };
 }
