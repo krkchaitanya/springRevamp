@@ -2,9 +2,7 @@ package com.streamsRevamp;
 
 import org.apache.commons.lang3.ArrayUtils;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -19,6 +17,8 @@ public class LamdasHelper {
         String[] actors1 = new String[] {"Mikel", "bellamy", "clarke", "monty"};
         String[] actors2 = new String[] {"jasper", "will", "lisa", "nancy"};
         joinStringArrs(actors1, actors2);
+        generateRandomNumsInRange(20,25);
+        findElements();
     };
 
 
@@ -79,5 +79,28 @@ public class LamdasHelper {
         String[] showCharacters = new String[] {"Will", "Nancy", "Jaha", "Jhonnathan", "Octavia"};
         String[] showCharacters2 = Stream.of(showCharacters).toArray(String[]::new);
         System.out.println(Arrays.toString(showCharacters2));
+    };
+
+
+//    Generate random integers
+    private static void generateRandomNumsInRange(int min, int max) {
+        Random r = new Random();
+        IntStream randomNums = r.ints(min, (max + 1)).limit(10);
+        randomNums.forEach(elem -> System.out.println(elem));
+    };
+
+//    JAVA8 stream findFirst() vs findAny()
+    private static void findElements() {
+        // findAny() validates if any element does exists or not
+        List<Integer> bluearray = Arrays.asList(1, 2, 3, 4, 5);
+        Optional<Integer> findAnyVal = bluearray.stream().filter(ele -> ele == 2 &&  ele == 3 && ele == 9).findAny();
+        System.out.println(findAnyVal.isPresent());
+
+        // findFirst() fetches the first element in the stream
+        List<String> strThings = Arrays.asList("Nancy", "Jonnathan", "will", "mike");
+        Optional<String> stCharacter = strThings.stream().filter(character -> character.equals("willl") || character.equals("Nancy") || character.equalsIgnoreCase("mike")).findFirst();
+        System.out.println(stCharacter.get());
+
+
     };
 }
