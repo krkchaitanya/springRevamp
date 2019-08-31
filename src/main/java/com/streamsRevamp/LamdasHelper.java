@@ -19,6 +19,7 @@ public class LamdasHelper {
         joinStringArrs(actors1, actors2);
         generateRandomNumsInRange(20,25);
         findElements();
+        validateArrElems();
     };
 
 
@@ -33,6 +34,7 @@ public class LamdasHelper {
             return intList;
         } else {
             IntStream intStreamEle = IntStream.range(100, 105);
+            // boxed() is an intermediate operation which invokes on stream instance and produces the stream instance as output.
             Stream<Integer> intArrStream = intStreamEle.boxed();
             return intArrStream.collect(Collectors.toList());
         }
@@ -100,7 +102,29 @@ public class LamdasHelper {
         List<String> strThings = Arrays.asList("Nancy", "Jonnathan", "will", "mike");
         Optional<String> stCharacter = strThings.stream().filter(character -> character.equals("willl") || character.equals("Nancy") || character.equalsIgnoreCase("mike")).findFirst();
         System.out.println(stCharacter.get());
-
-
     };
+
+
+//    Arrays contains a certain value ?  // list.contains() // list.stream.anyMatch() //
+    private static void validateArrElems() {
+        System.out.println("-- Entering method validateArrElems --");
+        String[] strelems = new String[] {"bike", "moto", "car", "jeep"};
+        boolean isEleExists = Arrays.asList(strelems).contains("car");
+        boolean isEleExists2 = Arrays.stream(strelems).anyMatch("cars"::equalsIgnoreCase);
+
+        System.out.println(isEleExists);
+        System.out.println(isEleExists2);
+
+        //filtering primitive arrays
+        int[] bluenums = {2,3,7,4,21,99,6};
+        boolean isEleExists3 = IntStream.of(bluenums).anyMatch(x -> x == 3);
+        System.out.println(isEleExists3);
+
+        String[] strnameshere = {"mike", "will", "jonnathan", "hopper", "bob"};
+        System.out.println(Arrays.asList(strnameshere));
+        System.out.println(Stream.of(strnameshere).collect(Collectors.toList()));
+        System.out.println(Arrays.asList(strnameshere).contains("will"));
+        System.out.println(Stream.of(strnameshere).anyMatch("mike"::equalsIgnoreCase));
+    };
+
 }
